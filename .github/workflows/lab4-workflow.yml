@@ -1,6 +1,6 @@
 name: Publish Package to GitHub NPM Registry
 
-on: 
+on: push
   release:
     types: [published]
     
@@ -22,4 +22,4 @@ jobs:
         - run: npm publish            
           env:
              NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-             
+
